@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>CALC</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="visor">
+            <div id="accumulator" class="acc"> </div>
+            <div id="total" class="total"> </div>
+        </div>
+        <div class="numeric action" onclick="cleanAll()">C</div>
+        <div class="numeric action" onclick="cleanCurrentEntry()">CE</div>
+        <div class="numeric action" onclick="percentage()">%</div>
+        <div class="numeric action" onclick="calcAction('/')">/</div>
+        <div class="numeric" onclick="addNumber(7)">7</div>
+        <div class="numeric" onclick="addNumber(8)">8</div>
+        <div class="numeric" onclick="addNumber(9)">9</div>
+        <div class="numeric action" onclick="calcAction('x')">x</div>
+        <div class="numeric" onclick="addNumber(4)">4</div>
+        <div class="numeric" onclick="addNumber(5)">5</div>
+        <div class="numeric" onclick="addNumber(6)">6</div>
+        <div class="numeric action" onclick="calcAction('-')">-</div>
+        <div class="numeric" onclick="addNumber(1)">1</div>
+        <div class="numeric" onclick="addNumber(2)">2</div>
+        <div class="numeric" onclick="addNumber(3)">3</div>
+        <div class="numeric action" onclick="calcAction('+')">+</div>
+        <div class="numeric zero" onclick="addNumber(0)">0</div>
+        <div class="numeric" onclick="addComma()">,</div>
+        <div class="numeric action result" onclick="result()">=</div>
+    </div>
+
+
+    <div class="footer">
+        <p>developed with bugs by <a href="https://github.com/x0uter" target="_blank">x0uter</a></p>
+    </div>
+
+</body>
+<script src="/script.js"></script>
+
+</html>
