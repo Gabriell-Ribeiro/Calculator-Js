@@ -51,8 +51,8 @@ function result() {
         num = copy * num
     } else {
         accumulator.append('=')
-        total.innerHTML = copy / num
-        accumulator.append(copy / num)
-        num = copy / num
+        total.innerHTML = (copy / num).toFixed(3)
+        accumulator.append((copy / num).toFixed(3))
+        num = (copy / num).toFixed(3)
     }
 }
