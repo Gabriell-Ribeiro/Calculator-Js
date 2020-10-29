@@ -1,43 +1,58 @@
-var num = []
-var copy
-var calc 
-var accumulator = document.querySelector('#accumulator')
-var total = document.querySelector('div #total')
+var num = ''
+var copy = ''
+function addNumber(n) {
+    num = n
 
-function addNumber(a) {
-    accumulator.append(a)
-    total.append(a)
-    num.push(a)
+    var accumulator = document.querySelector('#accumulator')
+    var total = document.querySelector('#total')
+
+    accumulator.append(num)
+    total.innerHTML = num
 }
 
 function cleanAll() {
-    // limpa array
-    var c = 0
-    while(c < num.length) {
-        num.shift()
-    }
+    num = ''
+    copy = ''
+
     accumulator.innerHTML = ''
     total.innerHTML = ''
 }
 
-function cleanCurrentEntry() {
-
-}
-
 function percentage() {
-
+    var res = (num * copy) / 100
+    total.innerHTML = res
 }
 
-function calcAction(a) {
-    if(a == '+') {
-        var s = 2 + 2
-    }
-    console.log(s)
-}
 
-function addComma() {
+var oper = ''
+function calcAction(o) {
+    oper = o
+    accumulator.append(o)
 
+    copy = num
+    num = ''
 }
 
 function result() {
+    if(oper == '+'){
+        accumulator.append('=')
+        total.innerHTML = copy + num
+        accumulator.append(copy + num)
+        num = copy + num
+    } else if(oper == '-') {
+        accumulator.append('=')
+        total.innerHTML = copy - num
+        accumulator.append(copy - num)
+        num = copy - num
+    } else if(oper == 'x') {
+        accumulator.append('=')
+        total.innerHTML = copy * num
+        accumulator.append(copy * num)
+        num = copy * num
+    } else {
+        accumulator.append('=')
+        total.innerHTML = copy / num
+        accumulator.append(copy / num)
+        num = copy / num
+    }
 }

@@ -46,8 +46,12 @@ body {
     color: #191a1c !important;
 }
 
-.zero {
+.c {
     width: 250px !important;
+}
+
+.zero {
+    width: 375px !important;
 }
 
 .action {
